@@ -1,11 +1,17 @@
 // チェッカー
-function setup() {
-  createCanvas(200, 200);
-  let size = width / 8;
-  noStroke();
-  for(let i = 0; i < 8; i++){
-    for(let j = 0; j < 8; j++){
-      // BLANK[1] (hint: rectのx座標は size * i, y座標はsize * j)
+function setup() { //プログラムの初期設定、画面を描写する準備
+  createCanvas(200, 200);　//幅200ピクセル、高さ200ピクセルのキャンバスの作成
+  let size = width / 8;　//キャンバスの幅を8で割り、1マスのサイズを計算
+  noStroke();　//図形の境界線を描写しない、塗りつぶしだけ表示
+  for(let i = 0; i < 8; i++){　//外側のループは行
+    for(let j = 0; j < 8; j++){　//内側のループは列、それぞれ0から7までの8回繰り返される。
+    // BLANK[1] (hint: rectのx座標は size * i, y座標はsize * j)
+    if ((i + j) % 2 === 0){
+      fill(255); //　白
+    } else {
+      fill(128); //　グレー
+    }
+    rect(size * i, size * j, size, size);　//行と列のインデックス(通し番号)が偶数の時に白、奇数の時に黒の矩形が描写される
+    }
     }
   }
-}
