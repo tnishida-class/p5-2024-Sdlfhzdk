@@ -10,7 +10,7 @@ function setup() {
   for(let i = 0; i < 9; i++){
     // BLANK[1] (hint: 縞の色を交互に変えるには2で割った余りを使おう)
     if(i % 2 == 0){
-    fill(0, 51, 160);
+    fill(0, 51, 160);　//青
     }
     else{fill(255)
     }
