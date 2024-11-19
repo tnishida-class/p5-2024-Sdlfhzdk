@@ -1,14 +1,14 @@
 // 練習問題「心臓の鼓動のように大きくなったり小さくなったりする円」
-let size = 50;
-let count = 0;
-let cycle = 100;
+let size = 50;　//初期の円のサイズを50に設定
+let count = 0;　//カウント0に初期化、
+let cycle = 100;　//1周期当たりのカウント数を100に設定
 let increment = 1;
 
 function setup(){
   createCanvas(200, 200);
 }
 function draw(){
-  background(160, 192, 255);
+  background(160, 192, 255); //背景色を薄い青に設定
  count = (count + increment) % cycle;
   if (keyIsPressed){
   increment = 2;
