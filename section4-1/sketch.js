@@ -17,7 +17,7 @@ function setup(){
   }
   console.log(sum);
 
-  // ここから平均・最大・最小を求めます
+  // ここから平均・最大・最小を求める
 
   let average = sum / scores.length; // 平均値 (average = 合計 / 配列の長さ)
   console.log(average);
@@ -47,7 +47,7 @@ console.log(smallest);
   for(let i = 0; i < scores.length; i++){
     const dx = width / scores.length;
     const h = height * scores[i] / 100;
-    if (scores[i] === largest) {//条件分岐を使って色を変更します
+    if (scores[i] === largest) {　　　//条件分岐を使って色を変更
     fill(255, 0, 0);
     } else if (scores[i] === smallest) {
     fill (0, 0, 255);
@@ -59,7 +59,7 @@ console.log(smallest);
     text(scores[i].toPrecision(3), i * dx, height - h);
   }
 
-stroke(0, 255, 0); // 平均点の線を引きます
+stroke(0, 255, 0); // 平均点の線を引く
 const ah = height * average/100
 line(0, height - ah, width, height-ah);
 }
