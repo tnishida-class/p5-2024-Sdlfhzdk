@@ -1,16 +1,24 @@
 // 練習問題「心臓の鼓動のように大きくなったり小さくなったりする円」
-let count;
-let cycle;
+let size = 50;　//初期の円のサイズを50に設定
+let count = 0;　//カウント0に初期化、
+let cycle = 100;　//1周期当たりのカウント数を100に設定
+let increment = 1;
 
 function setup(){
   createCanvas(200, 200);
-  count = 0;
-  cycle = 100;
 }
-
 function draw(){
-  background(160, 192, 255);
-  count = (count + 1) % cycle;
-  // BLANK[1]
-  ellipse(width / 2, height / 2, size);
+  background(160, 192, 255); //背景色を薄い青に設定
+ count = (count + increment) % cycle;
+  if (keyIsPressed){
+  increment = 2;
+} else {
+ increment = 1;
+  }
+  if (count < cycle/2) {
+ size = count + 50;
+ } else {
+ size = (cycle - count) + 50;
+ }
+ ellipse(width/2, height/2, size);　//円を描く関数
 }
