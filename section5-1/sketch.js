@@ -7,8 +7,22 @@ function setup(){
     let theta = TWO_PI * i / 12;
     let x = 100 + cos(theta) * 50;
     let y = 100 + sin(theta) * 50;
-    ellipse(x, y, 10);
+    //ellipse(x, y, 10);
+    fill(255, 222, 89)
+    star(x, y, 10);
   }
 }
+
+function star(cx, xy ,r){
+  beginShape();
+  for(var i = 0; i < 5; i++){
+    let theta = TWO_PI * i * 2 / 5 - HALF_PI;
+    let x = cx + cos(theta) * r;
+    let y = cy + sin(theta) * r;
+    vertex(x,y);
+  }
+  endShape(CLOSE);
+}
+
 
 // ヒント：section5-2 にある star 関数をここにコピーして、 draw 内で ellipse の代わりに使おう
