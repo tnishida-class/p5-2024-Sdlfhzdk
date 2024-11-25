@@ -26,7 +26,7 @@ function draw() {
     balls[i].display();
     box.checkBallInBox(balls[i]);//ボールが箱の中に入ったかチェック
   }
-
+  
   box.display();
 }
 
